@@ -15,22 +15,33 @@
         var User = React.createClass({
             getInitialState : function(){
                 return {
+					id:1,
                     username : "@JairAndresDiazPuentes",
                     avatar : "usuario1.png",
                     description : "fundacion universitaria los libertadores"
                 }
             },
-            changeUser : function(){
-                this.setState({
-                    username : "@OtroUsuario",
-                    avatar : "usuario2.png",
-                    description : "Otra universidad"
-                })
+            changeUser : function(id){
+				if(id==1){
+					this.setState({
+						id:2,
+						username : "@OtroUsuario",
+						avatar : "usuario2.png",
+						description : "Otra universidad"
+					})
+				}else{
+					this.setState({
+						id:1,
+						username : "@JairAndresDiazPuentes",
+						avatar : "usuario1.png",
+						description : "fundacion universitaria los libertadores"
+					})
+				}
             },
             render : function(){
                 var image = "./images/"+this.state.avatar;
                 return (
-                    <article className="User" onClick={this.changeUser}>
+                    <article className="User" onClick={() => this.changeUser(this.state.id)}>
                         <img src={image} className="User-avatar" width="100"/>
                         <div className="User-description">
                             <p className="User-name">{this.state.username}</p>
@@ -44,4 +55,3 @@
     </script>
   </body>
 </html>
-
