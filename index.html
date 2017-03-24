@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hola React</title>
+    <title>Introduccion React</title>
     <link rel="stylesheet" href="styles.css">
+	<link href="favicon.png" type="image/png" rel="icon" sizes="32x32">
     <script src="https://fb.me/react-0.13.3.min.js"></script>
     <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
   </head>
@@ -14,16 +15,16 @@
         var User = React.createClass({
             getInitialState : function(){
                 return {
-                    username : "@LeonidasEsteban",
-                    avatar : "twitter.jpg",
-                    description : "Lider de equipo frontend en @platzi"
+                    username : "@JairAndresDiazPuentes",
+                    avatar : "usuario1.png",
+                    description : "fundacion universitaria los libertadores"
                 }
             },
             changeUser : function(){
                 this.setState({
-                    username : "Leonidas Esteban",
-                    avatar : "facebook.jpg",
-                    description : "Lider de equipo frontend en @platzi"
+                    username : "@OtroUsuario",
+                    avatar : "usuario2.png",
+                    description : "Otra universidad"
                 })
             },
             render : function(){
